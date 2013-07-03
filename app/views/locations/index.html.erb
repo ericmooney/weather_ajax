@@ -1,0 +1,22 @@
+<h1>Destination</h1>
+
+<hr>
+
+<%= form_for(@location, :remote => :true, :url => 'locations/create') do |f| %>
+
+  <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<hr>
+
+<div id="results"></div>
