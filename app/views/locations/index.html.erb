@@ -3,7 +3,8 @@
 <hr>
 
 <%= form_for(@location, :remote => :true, :url => 'locations/create') do |f| %>
-
+<!-- if I had used sumeets way -->
+<!-- form_for("something", :html => {:id => "map_form"}) -->
   <div class="field">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>

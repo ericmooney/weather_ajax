@@ -4,6 +4,9 @@ var fetchWeather = function() {
   $.ajax({
     type: "GET",
     url: "http://bwb.webscript.io/weather?x=<%= @location.latitude %>&y=<%= @location.longitude %>",
+    // if this was done in the locations.js (like sumeets example) instead, then the format:
+    //  url: ""http://bwb.webscript.io/weather?x=" + $("latitude").val() + "&y=" + $("longitude").val()
+    //  and would be called on the submit button instead of page load
 
     complete: function(response) {
       var weather = $.parseJSON(response.responseText).currently.summary;
